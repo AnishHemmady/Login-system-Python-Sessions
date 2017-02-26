@@ -1,0 +1,21 @@
+{% extends "login_system_lyt.html" %}
+{% block body %}
+
+<h4>Welcome  {{success}} </h4>
+<br>
+
+<button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Logout modal</button>
+
+<div class="modal bs-example-modal-sm" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header"><h4>Logout <i class="fa fa-lock"></i></h4></div>
+      <div class="modal-body"><i class="fa fa-question-circle"></i> Are you sure you want to log-off?</div>
+      <div class="modal-footer"><a href="{{ url_for('Logout') }}" class="btn btn-primary btn-block" >Logout</a></div>
+	  
+    </div>
+	
+  </div>
+</div>
+
+{% endblock %}
